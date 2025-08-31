@@ -30,8 +30,10 @@ const renderLines = () => (
     <FloatLine vertical sx={{ top: 0, left: 80 }} />
   </>
 );
-
-export function HomeHugePackElements({ sx, ...other }: BoxProps) {
+interface IProps extends BoxProps {
+  ssrContent?: any;
+}
+export function HomeHugePackElements({ sx, ssrContent, ...other }: IProps) {
   return (
     <Box
       component="section"
@@ -50,10 +52,10 @@ export function HomeHugePackElements({ sx, ...other }: BoxProps) {
         <Container sx={{ textAlign: { xs: 'center', md: 'left' } }}>
           <Grid container rowSpacing={{ xs: 3, md: 0 }} columnSpacing={{ xs: 0, md: 8 }}>
             <Grid size={{ xs: 12, md: 6, lg: 7 }}>
-              <SectionCaption title="VIETNAMESE LEARNING KIT" />
+              <SectionCaption title={ssrContent?.caption} />
               <SectionTitle
-                title="A complete set of learning"
-                txtGradient="resources"
+                title={ssrContent?.title.content}
+                txtGradient={ssrContent?.title.gradient}
                 sx={{ mt: 3 }}
               />
             </Grid>
@@ -64,11 +66,10 @@ export function HomeHugePackElements({ sx, ...other }: BoxProps) {
                   sx={{ color: 'text.disabled', fontSize: { md: 20 }, lineHeight: { md: 36 / 20 } }}
                 >
                   <Box component="span" sx={{ color: 'text.primary' }}>
-                    Discover a full collection of tools for mastering Vietnamese
+                    {ssrContent?.section1}
                   </Box>
                   <br />
-                  from vocabulary lists, pronunciation guides, and grammar tips to interactive
-                  exercises and practice tests, all in one place.
+                  {ssrContent?.section2}
                 </Typography>
               </m.div>
             </Grid>
@@ -85,7 +86,7 @@ export function HomeHugePackElements({ sx, ...other }: BoxProps) {
               endIcon={<Iconify icon="eva:arrow-ios-forward-fill" />}
               sx={{ mt: 5, mx: 'auto' }}
             >
-              Browse learning materials
+              {ssrContent?.btn}
             </Button>
           </m.div>
         </Container>

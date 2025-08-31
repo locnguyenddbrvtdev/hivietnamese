@@ -1,8 +1,10 @@
+import Cookie from 'js-cookie';
+
 import { paths } from 'src/routes/paths';
 
 import axios from 'src/lib/axios';
 
-import { JWT_STORAGE_KEY } from './constant';
+import { DEVICE_ID_KEY, JWT_ACCESS_KEY, JWT_REFRESH_KEY } from './constant';
 
 // ----------------------------------------------------------------------
 
@@ -57,9 +59,9 @@ export function tokenExpired(exp: number) {
 
   setTimeout(() => {
     try {
-      alert('Token expired!');
-      sessionStorage.removeItem(JWT_STORAGE_KEY);
-      window.location.href = paths.auth.jwt.signIn;
+      alert('Phiên đăng nhập của bạn đã hết hạn. Vui lòng đăng nhập lại.');
+      Cookie.remove(JWT_ACCESS_KEY);
+      window.location.href = paths.auth.signIn;
     } catch (error) {
       console.error('Error during token expiration:', error);
       throw error;
@@ -69,22 +71,25 @@ export function tokenExpired(exp: number) {
 
 // ----------------------------------------------------------------------
 
-export async function setSession(accessToken: string | null) {
+export async function setSession(accessToken: string | null, refreshToken: string | null) {
   try {
-    if (accessToken) {
-      sessionStorage.setItem(JWT_STORAGE_KEY, accessToken);
-
+    if (accessToken && refreshToken) {
+      Cookie.set(JWT_ACCESS_KEY, accessToken);
+      Cookie.set(JWT_REFRESH_KEY, refreshToken);
+      const deviceId = Cookie.get(DEVICE_ID_KEY);
       axios.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
 
-      const decodedToken = jwtDecode(accessToken); // ~3 days by minimals server
+      axios.defaults.headers.common['device-id'] = deviceId || 'unknown-device';
+      // const decodedToken = jwtDecode(accessToken);
 
-      if (decodedToken && 'exp' in decodedToken) {
-        tokenExpired(decodedToken.exp);
-      } else {
-        throw new Error('Invalid access token!');
-      }
+      // if (decodedToken && 'exp' in decodedToken) {
+      //   tokenExpired(decodedToken.exp);
+      // } else {
+      //   throw new Error('Access token không hợp lệ!');
+      // }
     } else {
-      sessionStorage.removeItem(JWT_STORAGE_KEY);
+      Cookie.remove(JWT_ACCESS_KEY);
+      Cookie.remove(JWT_REFRESH_KEY);
       delete axios.defaults.headers.common.Authorization;
     }
   } catch (error) {

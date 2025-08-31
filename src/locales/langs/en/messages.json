@@ -3,5 +3,6 @@
     "success": "Language has been changed!",
     "error": "Error changing language!",
     "loading": "Loading..."
-  }
+  },
+  "axiosFailed": "Error occurred while processing your request!"
 }

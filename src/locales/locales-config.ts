@@ -5,10 +5,12 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 
 // MUI Core Locales
 import {
+  enUS as enUSCore,
   frFR as frFRCore,
   viVN as viVNCore,
   zhCN as zhCNCore,
-  arSA as arSACore,
+  jaJP as jaJPCore,
+  koKR as koKRCore,
 } from '@mui/material/locale';
 // MUI Date Pickers Locales
 import {
@@ -16,6 +18,8 @@ import {
   frFR as frFRDate,
   viVN as viVNDate,
   zhCN as zhCNDate,
+  jaJP as jaJPDate,
+  koKR as koKRDate,
 } from '@mui/x-date-pickers/locales';
 // MUI Data Grid Locales
 import {
@@ -23,13 +27,14 @@ import {
   frFR as frFRDataGrid,
   viVN as viVNDataGrid,
   zhCN as zhCNDataGrid,
-  arSD as arSDDataGrid,
+  jaJP as jaJPDataGrid,
+  koKR as koKRDataGrid,
 } from '@mui/x-data-grid/locales';
 
 // ----------------------------------------------------------------------
 
 // Supported languages
-export const supportedLngs = ['en', 'fr', 'vi', 'cn', 'ar'] as const;
+export const supportedLngs = ['en', 'fr', 'vi', 'cn', 'jp', 'kr'] as const;
 export type LangCode = (typeof supportedLngs)[number];
 
 // Fallback and default namespace
@@ -67,7 +72,7 @@ export const allLangs: LangOption[] = [
     adapterLocale: 'en',
     numberFormat: { code: 'en-US', currency: 'USD' },
     systemValue: {
-      components: { ...enUSDate.components, ...enUSDataGrid.components },
+      components: { ...enUSCore.components, ...enUSDate.components, ...enUSDataGrid.components },
     },
   },
   {
@@ -101,13 +106,23 @@ export const allLangs: LangOption[] = [
     },
   },
   {
-    value: 'ar',
-    label: 'Arabic',
-    countryCode: 'SA',
-    adapterLocale: 'ar-sa',
-    numberFormat: { code: 'ar-SA', currency: 'SAR' },
+    value: 'jp',
+    label: 'Japanese',
+    countryCode: 'JP',
+    adapterLocale: 'ja',
+    numberFormat: { code: 'ja-JP', currency: 'JPY' },
     systemValue: {
-      components: { ...arSACore.components, ...arSDDataGrid.components },
+      components: { ...jaJPCore.components, ...jaJPDate.components, ...jaJPDataGrid.components },
+    },
+  },
+  {
+    value: 'kr',
+    label: 'Korean',
+    countryCode: 'KR',
+    adapterLocale: 'ko',
+    numberFormat: { code: 'ko-KR', currency: 'KRW' },
+    systemValue: {
+      components: { ...koKRCore.components, ...koKRDate.components, ...koKRDataGrid.components },
     },
   },
 ];

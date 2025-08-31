@@ -1,0 +1,94 @@
+{
+  "root": {
+    "homeHero": {
+      "H1.1": "베트남어 학습을 가속하세요",
+      "H1.2": "와 함께",
+      "desc1.1": "베트남어를 마스터하기 위한 완벽한 출발점입니다.",
+      "desc1.2": "검증된 방법으로 학습을 더 쉽고, 더 빠르게, 더 재미있게 만듭니다.",
+      "happyStudent": "많은 학습자가 우리와 함께 베트남어 실력을 성공적으로 향상했습니다.",
+      "startLearningBtnContent": "학습 시작",
+      "viewCourseBtnContent": "코스 보기",
+      "trialFreeLessonLink": "무료 체험 수업",
+      "availableUser": "대상",
+      "beginner": "초급",
+      "intermediate": "중급",
+      "advanced": "고급",
+      "businessVietnamese": "비즈니스 베트남어",
+      "vietnameseForTravel": "여행 베트남어"
+    },
+    "homeMinimal": {
+      "caption": "성공 시각화",
+      "title": "포함 내용",
+      "items": [
+        {
+          "title": "문법 & 어휘",
+          "description": "짧고 이해하기 쉬운 레슨으로 탄탄한 기초를 다집니다.",
+          "icon": "📚"
+        },
+        {
+          "title": "발음 & 듣기",
+          "description": "일상 소통을 위한 정확한 발음과 듣기 이해를 익힙니다.",
+          "icon": "🎤"
+        },
+        {
+          "title": "문화 & 커뮤니케이션",
+          "description": "베트남 문화를 탐구하고 실제 상황에서 소통하는 법을 배웁니다.",
+          "icon": "🌏"
+        }
+      ]
+    },
+    "hugePackElements": {
+      "caption": "베트남어 학습 키트",
+      "title": {
+        "content": "완전한 학습",
+        "gradient": "자료"
+      },
+      "section1": "베트남어 습득을 위한 도구 모음을 만나보세요.",
+      "section2": "어휘 목록, 발음 가이드, 문법 팁, 인터랙티브 연습, 모의 시험까지 한 곳에 모두 모았습니다.",
+      "btn": "학습 자료 둘러보기"
+    }
+  },
+  "auth": {
+    "splitLayout": {
+      "needHelp": "도움이 필요하신가요?"
+    },
+    "signIn": {
+      "title": "안녕하세요, 다시 오신 것을 환영합니다",
+      "subtitle": "계속하려면 자격 증명을 입력하세요",
+      "form": {
+        "title": "계정에 로그인",
+        "dontHaveAnAccount": "계정이 없으신가요?",
+        "signUpLink": "시작하기",
+        "forgotPasswordLink": "비밀번호를 잊으셨나요?",
+        "submitBtn": "로그인",
+        "labelEmailField": "이메일 주소",
+        "labelPasswordField": "비밀번호",
+        "placeholderPasswordField": "6자 이상",
+        "or": "또는"
+      }
+    },
+    "signUp": {
+      "title": "Minimal Learning",
+      "subtitle": "함께 여정을 시작하세요",
+      "form": {
+        "title": "완전히 무료로 시작",
+        "dontHaveAnAccount": "이미 계정이 있으신가요? ",
+        "signInLink": "시작하기",
+        "labelFirstNameField": "이름",
+        "labelLastNameField": "성",
+        "labelEmailField": "이메일 주소",
+        "labelPasswordField": "비밀번호",
+        "placeholderPasswordField": "6자 이상",
+        "submitBtn": "계정 만들기",
+        "or": "또는",
+        "terms": {
+          "a": "가입함으로써 ",
+          "b": "서비스 약관",
+          "c": " 및 ",
+          "d": "개인정보 처리방침",
+          "note": ""
+        }
+      }
+    }
+  }
+}

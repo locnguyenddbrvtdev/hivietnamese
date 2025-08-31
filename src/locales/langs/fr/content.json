@@ -1,0 +1,93 @@
+{
+  "root": {
+    "homeHero": {
+      "H1.1": "Boostez votre apprentissage du vietnamien",
+      "H1.2": "avec",
+      "desc1.1": "Le point de départ idéal pour maîtriser le vietnamien.",
+      "desc1.2": "Nos méthodes éprouvées rendent l’apprentissage plus simple, plus rapide et plus agréable.",
+      "happyStudent": "apprenants ont amélioré avec succès leur vietnamien avec nous.",
+      "startLearningBtnContent": "Commencer à apprendre",
+      "viewCourseBtnContent": "Voir le cours",
+      "trialFreeLessonLink": "Essayer une leçon gratuite",
+      "availableUser": "Disponible pour",
+      "beginner": "Débutants",
+      "intermediate": "Intermédiaire",
+      "advanced": "Avancé",
+      "businessVietnamese": "Vietnamien des affaires",
+      "vietnameseForTravel": "Vietnamien pour le voyage"
+    },
+    "homeMinimal": {
+      "caption": "Visualiser la réussite",
+      "title": "Ce qui est inclus",
+      "items": [
+        {
+          "title": "Grammaire & Vocabulaire",
+          "description": "Bâtissez une base solide en vietnamien avec des leçons courtes et faciles à comprendre.",
+          "icon": "📚"
+        },
+        {
+          "title": "Prononciation & Compréhension orale",
+          "description": "Maîtrisez une prononciation claire et l’écoute pour la communication au quotidien.",
+          "icon": "🎤"
+        },
+        {
+          "title": "Culture & Communication",
+          "description": "Découvrez la culture vietnamienne et apprenez à interagir dans des situations réelles.",
+          "icon": "🌏"
+        }
+      ]
+    },
+    "hugePackElements": {
+      "caption": "KIT D’APPRENTISSAGE DU VIETNAMIEN",
+      "title": {
+        "content": "Un ensemble complet de",
+        "gradient": "ressources"
+      },
+      "section1": "Découvrez une collection complète d’outils pour maîtriser le vietnamien.",
+      "section2": "Listes de vocabulaire, guides de prononciation, astuces de grammaire, exercices interactifs et tests blancs — tout au même endroit.",
+      "btn": "Parcourir les ressources"
+    }
+  },
+  "auth": {
+    "splitLayout": {
+      "needHelp": "Besoin d’aide ?"
+    },
+    "signIn": {
+      "title": "Bonjour, bienvenue à nouveau",
+      "subtitle": "Veuillez saisir vos identifiants pour continuer",
+      "form": {
+        "title": "Connectez-vous à votre compte",
+        "dontHaveAnAccount": "Pas de compte ?",
+        "signUpLink": "Commencer",
+        "forgotPasswordLink": "Mot de passe oublié ?",
+        "submitBtn": "Se connecter",
+        "labelEmailField": "Adresse e-mail",
+        "labelPasswordField": "Mot de passe",
+        "placeholderPasswordField": "6+ caractères",
+        "or": "OU"
+      }
+    },
+    "signUp": {
+      "title": "Apprentissage Minimal",
+      "subtitle": "Rejoignez-nous pour démarrer votre parcours",
+      "form": {
+        "title": "Commencez gratuitement",
+        "dontHaveAnAccount": "Vous avez déjà un compte ? ",
+        "signInLink": "Commencer",
+        "labelFirstNameField": "Prénom",
+        "labelLastNameField": "Nom",
+        "labelEmailField": "Adresse e-mail",
+        "labelPasswordField": "Mot de passe",
+        "placeholderPasswordField": "6+ caractères",
+        "submitBtn": "Créer un compte",
+        "or": "OU",
+        "terms": {
+          "a": "En m’inscrivant, j’accepte les ",
+          "b": "Conditions d’utilisation",
+          "c": " et la ",
+          "d": "Politique de confidentialité"
+        }
+      }
+    }
+  }
+}

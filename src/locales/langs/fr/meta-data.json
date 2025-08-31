@@ -1,0 +1,40 @@
+{
+  "root": {
+    "title": "HayVietnamese — Plateforme multilingue d’apprentissage du vietnamien",
+    "description": "Apprenez le vietnamien en mode multilingue : parcours structurés, leçons courtes, phrases du quotidien et outils de pratique, du débutant à l’avancé."
+  },
+  "ourCourse": {
+    "title": "Cours — Pour tous les niveaux",
+    "description": "Parcourez des parcours par niveau ainsi que des modules de prononciation, grammaire et culture, du débutant à l’avancé."
+  },
+  "contact": {
+    "title": "Contact — Écrivez-nous",
+    "description": "Questions, retours ou partenariats ? Contactez l’équipe HayVietnamese."
+  },
+  "aboutUs": {
+    "title": "À propos — Notre mission et notre équipe",
+    "description": "Nous rendons le vietnamien accessible grâce à des leçons claires, un support multilingue et une pratique concrète."
+  },
+  "comingSoon": {
+    "title": "Bientôt disponible — Nouvelles leçons et fonctionnalités",
+    "description": "De nouveaux cours, quiz et outils arrivent bientôt. Restez à l’écoute."
+  },
+  "maintenance": {
+    "title": "Maintenance — De retour très vite",
+    "description": "Nous améliorons HayVietnamese pour mieux vous servir. Revenez bientôt."
+  },
+  "auth": {
+    "signIn": {
+      "title": "Connexion — Reprenez votre apprentissage",
+      "description": "Accédez à votre progression, à vos cours et à votre vocabulaire enregistré."
+    },
+    "signUp": {
+      "title": "Créer un compte — Commencer gratuitement",
+      "description": "Rejoignez HayVietnamese pour débloquer les cours, le suivi de progression et les outils de pratique."
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe — Récupérer l’accès",
+      "description": "Réinitialisez en toute sécurité le mot de passe de votre compte HayVietnamese."
+    }
+  }
+}

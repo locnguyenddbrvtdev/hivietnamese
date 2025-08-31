@@ -21,27 +21,30 @@ import { FormHead } from '../../../components/form-head';
 import { FormDivider } from '../../../components/form-divider';
 import { FormSocials } from '../../../components/form-socials';
 import { SignUpTerms } from '../../../components/sign-up-terms';
+import { signUp } from 'src/auth/context/jwt';
+import { toast } from 'src/components/snackbar';
 
 // ----------------------------------------------------------------------
 
-export type SignUpSchemaType = zod.infer<typeof SignUpSchema>;
-
-export const SignUpSchema = zod.object({
-  firstName: zod.string().min(1, { message: 'First name is required!' }),
-  lastName: zod.string().min(1, { message: 'Last name is required!' }),
-  email: zod
-    .string()
-    .min(1, { message: 'Email is required!' })
-    .email({ message: 'Email must be a valid email address!' }),
-  password: zod
-    .string()
-    .min(1, { message: 'Password is required!' })
-    .min(6, { message: 'Password must be at least 6 characters!' }),
-});
-
 // ----------------------------------------------------------------------
+interface IProps {
+  content: any;
+}
+export function SplitSignUpView({ content }: IProps) {
+  type SignUpSchemaType = zod.infer<typeof SignUpSchema>;
 
-export function SplitSignUpView() {
+  const SignUpSchema = zod.object({
+    firstName: zod.string().min(1, { message: content.requiredFirstNameErrMess }),
+    lastName: zod.string().min(1, { message: content.requiredLastNameErrMess }),
+    email: zod
+      .string()
+      .min(1, { message: content.requiredEmailErrMess })
+      .email({ message: content.invalidEmailErrMess }),
+    password: zod
+      .string()
+      .min(1, { message: content.requiredPasswordErrMess })
+      .min(6, { message: content.tooShortPasswordErrMess }),
+  });
   const showPassword = useBoolean();
 
   const defaultValues: SignUpSchemaType = {
@@ -63,8 +66,7 @@ export function SplitSignUpView() {
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      console.info('DATA', data);
+      await signUp({ ...data }).then(() => toast.success(content.successMess));
     } catch (error) {
       console.error(error);
     }
@@ -77,22 +79,26 @@ export function SplitSignUpView() {
       >
         <Field.Text
           name="firstName"
-          label="First name"
+          label={content.labelFirstNameField}
           slotProps={{ inputLabel: { shrink: true } }}
         />
         <Field.Text
           name="lastName"
-          label="Last name"
+          label={content.labelLastNameField}
           slotProps={{ inputLabel: { shrink: true } }}
         />
       </Box>
 
-      <Field.Text name="email" label="Email address" slotProps={{ inputLabel: { shrink: true } }} />
+      <Field.Text
+        name="email"
+        label={content.labelEmailField}
+        slotProps={{ inputLabel: { shrink: true } }}
+      />
 
       <Field.Text
         name="password"
-        label="Password"
-        placeholder="6+ characters"
+        label={content.labelPasswordField}
+        placeholder={content.placeholderPasswordField}
         type={showPassword.value ? 'text' : 'password'}
         slotProps={{
           inputLabel: { shrink: true },
@@ -117,7 +123,7 @@ export function SplitSignUpView() {
         loading={isSubmitting}
         loadingIndicator="Create account..."
       >
-        Create account
+        {content.submitBtn}
       </Button>
     </Box>
   );
@@ -125,12 +131,12 @@ export function SplitSignUpView() {
   return (
     <>
       <FormHead
-        title="Get started absolutely free"
+        title={content.title}
         description={
           <>
-            {`Already have an account? `}
-            <Link component={RouterLink} href={'paths.authDemo.split.signIn'} variant="subtitle2">
-              Get started
+            {content.dontHaveAnAccount}
+            <Link component={RouterLink} href={paths.auth.signIn} variant="subtitle2">
+              {content.signInLink}
             </Link>
           </>
         }
@@ -141,9 +147,9 @@ export function SplitSignUpView() {
         {renderForm()}
       </Form>
 
-      <SignUpTerms />
+      <SignUpTerms content={content.terms} />
 
-      <FormDivider />
+      <FormDivider label={content.or} />
 
       <FormSocials
         signInWithGoogle={() => {}}

@@ -1,12 +1,12 @@
-export type UserType = Record<string, any> | null;
+import { IUser } from 'src/types/user';
 
 export type AuthState = {
-  user: UserType;
+  user: IUser | null;
   loading: boolean;
 };
 
 export type AuthContextValue = {
-  user: UserType;
+  user: IUser | null;
   loading: boolean;
   authenticated: boolean;
   unauthenticated: boolean;

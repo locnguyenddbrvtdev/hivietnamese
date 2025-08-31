@@ -1,0 +1,40 @@
+{
+  "root": {
+    "title": "HayVietnamese — 多言語対応のベトナム語学習プラットフォーム",
+    "description": "多言語で学ぶベトナム語。体系的な学習パス、短いレッスン、実生活で使えるフレーズと練習ツールを初級から上級まで。"
+  },
+  "ourCourse": {
+    "title": "コース — すべてのレベルに対応",
+    "description": "レベル別トラックや発音・文法・文化モジュールを初級から上級まで用意。"
+  },
+  "contact": {
+    "title": "お問い合わせ — ご連絡はこちら",
+    "description": "質問・フィードバック・提携のご相談は HayVietnamese チームまで。"
+  },
+  "aboutUs": {
+    "title": "私たちについて — ミッションとチーム",
+    "description": "明快なレッスン、多言語サポート、実践的な練習でベトナム語をもっと身近に。"
+  },
+  "comingSoon": {
+    "title": "近日公開 — 新しいレッスンと機能",
+    "description": "新コースやクイズ、ツールを順次公開予定です。お楽しみに。"
+  },
+  "maintenance": {
+    "title": "メンテナンス中 — まもなく再開",
+    "description": "より良い体験のために HayVietnamese をアップグレード中です。しばらくお待ちください。"
+  },
+  "auth": {
+    "signIn": {
+      "title": "ログイン — 学習を続ける",
+      "description": "学習履歴、受講コース、保存した単語にアクセス。"
+    },
+    "signUp": {
+      "title": "アカウント作成 — 無料で開始",
+      "description": "HayVietnamese に参加してコースや進捗管理、練習ツールを利用しましょう。"
+    },
+    "resetPassword": {
+      "title": "パスワード再設定 — アクセス回復",
+      "description": "HayVietnamese アカウントのパスワードを安全に再設定します。"
+    }
+  }
+}

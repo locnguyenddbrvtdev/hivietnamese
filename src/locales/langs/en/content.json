@@ -1,0 +1,105 @@
+{
+  "root": {
+    "homeHero": {
+      "H1.1": "Boost your Vietnamese learning",
+      "H1.2": "journey with",
+      "desc1.1": "The perfect starting point for mastering Vietnamese.",
+      "desc1.2": "Our proven methods make learning easier, faster, and more enjoyable.",
+      "happyStudent": "happy students have successfully improved their Vietnamese skills with us.",
+      "startLearningBtnContent": "Start Learning",
+      "viewCourseBtnContent": "View Course",
+      "trialFreeLessonLink": "Try a Free Lesson",
+      "availableUser": "Available For",
+      "beginner": "Beginners",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "businessVietnamese": "Business Vietnamese",
+      "vietnameseForTravel": "Vietnamese for Travel"
+    },
+    "homeMinimal": {
+      "caption": "Visualizing Success",
+      "title": "What's in",
+      "items": [
+        {
+          "title": "Grammar & Vocabulary",
+          "description": "Build a solid Vietnamese foundation with short, easy-to-understand lessons.",
+          "icon": "📚"
+        },
+        {
+          "title": "Pronunciation & Listening",
+          "description": "Master clear pronunciation and listening comprehension for everyday communication.",
+          "icon": "🎤"
+        },
+        {
+          "title": "Culture & Communication",
+          "description": "Explore Vietnamese culture and learn how to interact in real-life situations.",
+          "icon": "🌏"
+        }
+      ]
+    },
+    "hugePackElements": {
+      "caption": "VIETNAMESE LEARNING KIT",
+      "title": {
+        "content": "A complete set of learning",
+        "gradient": "resources"
+      },
+      "section1": "Discover a full collection of tools for mastering Vietnamese.",
+      "section2": "From vocabulary lists, pronunciation guides, and grammar tips to interactive exercises and practice tests, all in one place.",
+      "btn": "Browse learning materials"
+    }
+  },
+  "auth": {
+    "splitLayout": {
+      "needHelp": "Need help?"
+    },
+    "signIn": {
+      "title": "Hi, Welcome back",
+      "subtitle": "Please enter your credentials to continue",
+      "form": {
+        "title": "Sign in to your account",
+        "dontHaveAnAccount": "Don’t have an account?",
+        "signUpLink": "Get started",
+        "forgotPasswordLink": "Forgot password?",
+        "submitBtn": "Sign In",
+        "labelEmailField": "Email address",
+        "requiredEmailErrMess": "Email address is required!",
+        "invalidEmailErrMess": "Email address is invalid!",
+        "labelPasswordField": "Password",
+        "placeholderPasswordField": "6+ characters",
+        "requiredPasswordErrMess": "Password is required!",
+        "or": "OR",
+        "signInInforIsInCorrect": "Sign in information is incorrect!",
+        "successMess": "Sign In successful!"
+      }
+    },
+    "signUp": {
+      "title": "Minimal Learning",
+      "subtitle": "Join us to start your journey",
+      "form": {
+        "title": "Get started absolutely free",
+        "dontHaveAnAccount": "Already have an account? ",
+        "signInLink": "Get started",
+        "labelFirstNameField": "First name",
+        "requiredFirstNameErrMess": "First name is required!",
+        "labelLastNameField": "Last name",
+        "requiredLastNameErrMess": "Last name is required!",
+        "labelEmailField": "Email address",
+        "requiredEmailErrMess": "Email address is required!",
+        "invalidEmailErrMess": "Email address is invalid!",
+        "labelPasswordField": "Password",
+        "placeholderPasswordField": "6+ characters",
+        "requiredPasswordErrMess": "Password is required!",
+        "tooShortPasswordErrMess": "Password must be at least 6 characters!",
+        "submitBtn": "Create account",
+        "or": "OR",
+        "terms": {
+          "a": "By signing up, I agree to ",
+          "b": "Terms of service",
+          "c": " and ",
+          "d": "Privacy policy"
+        }
+      },
+      "successMess": "Sign up successful!"
+    }
+  }
+}

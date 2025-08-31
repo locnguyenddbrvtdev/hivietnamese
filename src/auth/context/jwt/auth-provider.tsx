@@ -1,15 +1,16 @@
 'use client';
 
-import type { AuthState } from '../../types';
-
+import Cookie from 'js-cookie';
 import { useSetState } from 'minimal-shared/hooks';
 import { useMemo, useEffect, useCallback } from 'react';
 
 import axios, { endpoints } from 'src/lib/axios';
 
-import { JWT_STORAGE_KEY } from './constant';
+import { setSession } from './utils';
 import { AuthContext } from '../auth-context';
-import { setSession, isValidToken } from './utils';
+import { JWT_ACCESS_KEY, JWT_REFRESH_KEY } from './constant';
+
+import type { AuthState } from '../../types';
 
 // ----------------------------------------------------------------------
 
@@ -28,10 +29,10 @@ export function AuthProvider({ children }: Props) {
 
   const checkUserSession = useCallback(async () => {
     try {
-      const accessToken = sessionStorage.getItem(JWT_STORAGE_KEY);
-
-      if (accessToken && isValidToken(accessToken)) {
-        setSession(accessToken);
+      const accessToken = Cookie.get(JWT_ACCESS_KEY);
+      const refreshToken = Cookie.get(JWT_REFRESH_KEY);
+      if (accessToken && refreshToken) {
+        setSession(accessToken, refreshToken);
 
         const res = await axios.get(endpoints.auth.me);
 
@@ -42,8 +43,8 @@ export function AuthProvider({ children }: Props) {
         setState({ user: null, loading: false });
       }
     } catch (error) {
-      console.error(error);
       setState({ user: null, loading: false });
+      setSession(null, null);
     }
   }, [setState]);
 
@@ -60,7 +61,7 @@ export function AuthProvider({ children }: Props) {
 
   const memoizedValue = useMemo(
     () => ({
-      user: state.user ? { ...state.user, role: state.user?.role ?? 'admin' } : null,
+      user: state.user ? { ...state.user } : null,
       checkUserSession,
       loading: status === 'loading',
       authenticated: status === 'authenticated',
@@ -69,5 +70,5 @@ export function AuthProvider({ children }: Props) {
     [checkUserSession, state.user, status]
   );
 
-  return <AuthContext value={memoizedValue}>{children}</AuthContext>;
+  return <AuthContext.Provider value={memoizedValue}>{children}</AuthContext.Provider>;
 }

@@ -29,18 +29,22 @@ const renderLines = () => (
   </>
 );
 
-export function HomeMinimal({ sx, ...other }: BoxProps) {
+interface IProps extends BoxProps {
+  ssrContent?: any;
+}
+
+export function HomeMinimal({ sx, ssrContent, ...other }: IProps) {
   const renderDescription = () => (
     <>
       <SectionTitle
-        caption="Visualizing Success"
-        title="What's in"
+        caption={ssrContent?.['caption']}
+        title={ssrContent?.['title']}
         txtGradient="HayVietNammese?"
         sx={{ mb: { xs: 5, md: 8 }, textAlign: { xs: 'center', md: 'left' } }}
       />
 
       <Stack spacing={6} sx={{ maxWidth: { sm: 560, md: 400 }, mx: { xs: 'auto', md: 'unset' } }}>
-        {ITEMS.map((item) => {
+        {ssrContent?.items?.map((item: any) => {
           return (
             <Box
               component={m.div}

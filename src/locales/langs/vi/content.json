@@ -1,0 +1,93 @@
+{
+  "root": {
+    "homeHero": {
+      "H1.1": "Tăng tốc việc học tiếng Việt của bạn",
+      "H1.2": "cùng với",
+      "desc1.1": "Điểm khởi đầu hoàn hảo để làm chủ tiếng Việt.",
+      "desc1.2": "Phương pháp đã được chứng minh giúp việc học dễ hơn, nhanh hơn và thú vị hơn.",
+      "happyStudent": "học viên đã nâng cao kỹ năng tiếng Việt thành công cùng chúng tôi.",
+      "startLearningBtnContent": "Bắt đầu học",
+      "viewCourseBtnContent": "Xem khóa học",
+      "trialFreeLessonLink": "Thử bài học miễn phí",
+      "availableUser": "Dành cho",
+      "beginner": "Người mới bắt đầu",
+      "intermediate": "Trung cấp",
+      "advanced": "Nâng cao",
+      "businessVietnamese": "Tiếng Việt thương mại",
+      "vietnameseForTravel": "Tiếng Việt du lịch"
+    },
+    "homeMinimal": {
+      "caption": "Hình dung thành công",
+      "title": "Có gì bên trong",
+      "items": [
+        {
+          "title": "Ngữ pháp & Từ vựng",
+          "description": "Xây dựng nền tảng vững chắc với các bài học ngắn, dễ hiểu.",
+          "icon": "📚"
+        },
+        {
+          "title": "Phát âm & Nghe hiểu",
+          "description": "Làm chủ phát âm rõ ràng và kỹ năng nghe cho giao tiếp hằng ngày.",
+          "icon": "🎤"
+        },
+        {
+          "title": "Văn hoá & Giao tiếp",
+          "description": "Khám phá văn hoá Việt Nam và cách tương tác trong tình huống thực tế.",
+          "icon": "🌏"
+        }
+      ]
+    },
+    "hugePackElements": {
+      "caption": "BỘ CÔNG CỤ HỌC TIẾNG VIỆT",
+      "title": {
+        "content": "Trọn bộ công cụ học",
+        "gradient": "tài nguyên"
+      },
+      "section1": "Khám phá bộ công cụ đầy đủ để làm chủ tiếng Việt.",
+      "section2": "Từ danh sách từ vựng, hướng dẫn phát âm, mẹo ngữ pháp đến bài tập tương tác và bài kiểm tra thử — tất cả trong một nơi.",
+      "btn": "Duyệt tài liệu học"
+    }
+  },
+  "auth": {
+    "splitLayout": {
+      "needHelp": "Cần hỗ trợ?"
+    },
+    "signIn": {
+      "title": "Chào bạn, mừng quay trở lại",
+      "subtitle": "Vui lòng nhập thông tin để tiếp tục",
+      "form": {
+        "title": "Đăng nhập vào tài khoản",
+        "dontHaveAnAccount": "Chưa có tài khoản?",
+        "signUpLink": "Bắt đầu",
+        "forgotPasswordLink": "Quên mật khẩu?",
+        "submitBtn": "Đăng nhập",
+        "labelEmailField": "Địa chỉ email",
+        "labelPasswordField": "Mật khẩu",
+        "placeholderPasswordField": "Tối thiểu 6 ký tự",
+        "or": "HOẶC"
+      }
+    },
+    "signUp": {
+      "title": "Minimal Learning",
+      "subtitle": "Tham gia để bắt đầu hành trình của bạn",
+      "form": {
+        "title": "Bắt đầu hoàn toàn miễn phí",
+        "dontHaveAnAccount": "Đã có tài khoản? ",
+        "signInLink": "Bắt đầu",
+        "labelFirstNameField": "Tên",
+        "labelLastNameField": "Họ",
+        "labelEmailField": "Địa chỉ email",
+        "labelPasswordField": "Mật khẩu",
+        "placeholderPasswordField": "Tối thiểu 6 ký tự",
+        "submitBtn": "Tạo tài khoản",
+        "or": "HOẶC",
+        "terms": {
+          "a": "Khi đăng ký, tôi đồng ý với ",
+          "b": "Điều khoản dịch vụ",
+          "c": " và ",
+          "d": "Chính sách bảo mật"
+        }
+      }
+    }
+  }
+}

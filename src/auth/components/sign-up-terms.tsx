@@ -4,8 +4,10 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 
 // ----------------------------------------------------------------------
-
-export function SignUpTerms({ sx, ...other }: BoxProps) {
+interface IProps extends BoxProps {
+  content: any;
+}
+export function SignUpTerms({ sx, content, ...other }: IProps) {
   return (
     <Box
       component="span"
@@ -21,13 +23,13 @@ export function SignUpTerms({ sx, ...other }: BoxProps) {
       ]}
       {...other}
     >
-      {'By signing up, I agree to '}
+      {content.a}
       <Link underline="always" color="text.primary">
-        Terms of service
+        {content.b}
       </Link>
-      {' and '}
+      {content.c}
       <Link underline="always" color="text.primary">
-        Privacy policy
+        {content.d}
       </Link>
       .
     </Box>

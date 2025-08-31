@@ -1,0 +1,40 @@
+{
+  "root": {
+    "title": "HayVietnamese — Multilingual Vietnamese Learning Platform",
+    "description": "Learn Vietnamese the multilingual way: structured paths, bite-size lessons, real-life phrases, and practice tools from beginner to advanced."
+  },
+  "ourCourse": {
+    "title": "Courses — Vietnamese for Every Level",
+    "description": "Browse level-based tracks plus pronunciation, grammar, and culture modules for beginners through advanced learners."
+  },
+  "contact": {
+    "title": "Contact — Get in Touch",
+    "description": "Questions, feedback, or partnerships? Contact the HayVietnamese team."
+  },
+  "aboutUs": {
+    "title": "About — Our Mission & Team",
+    "description": "We make Vietnamese accessible worldwide with clear lessons, multilingual support, and practical practice."
+  },
+  "comingSoon": {
+    "title": "Coming Soon — New Lessons & Features",
+    "description": "Fresh courses, quizzes, and tools are on the way. Stay tuned."
+  },
+  "maintenance": {
+    "title": "Maintenance — We’ll Be Back Shortly",
+    "description": "We’re upgrading HayVietnamese for a better experience. Please check back soon."
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign In — Continue Learning",
+      "description": "Access your progress, courses, and saved vocabulary."
+    },
+    "signUp": {
+      "title": "Create Account — Start Learning Free",
+      "description": "Join HayVietnamese to unlock courses, progress tracking, and practice tools."
+    },
+    "resetPassword": {
+      "title": "Reset Password — Recover Access",
+      "description": "Securely reset your HayVietnamese account password."
+    }
+  }
+}

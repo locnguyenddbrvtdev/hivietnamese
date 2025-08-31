@@ -1,0 +1,94 @@
+{
+  "root": {
+    "homeHero": {
+      "H1.1": "ベトナム語学習を加速しよう",
+      "H1.2": "とともに",
+      "desc1.1": "ベトナム語をマスターするための完璧な出発点です。",
+      "desc1.2": "実証済みのメソッドで、学習をより簡単に、速く、楽しくします。",
+      "happyStudent": "多くの学習者が私たちのサポートでベトナム語力を向上させました。",
+      "startLearningBtnContent": "学習を始める",
+      "viewCourseBtnContent": "コースを見る",
+      "trialFreeLessonLink": "無料レッスンを試す",
+      "availableUser": "対象",
+      "beginner": "初級",
+      "intermediate": "中級",
+      "advanced": "上級",
+      "businessVietnamese": "ビジネスベトナム語",
+      "vietnameseForTravel": "旅行用ベトナム語"
+    },
+    "homeMinimal": {
+      "caption": "成功を可視化する",
+      "title": "収録内容",
+      "items": [
+        {
+          "title": "文法と語彙",
+          "description": "短く分かりやすいレッスンでベトナム語の土台を築きます。",
+          "icon": "📚"
+        },
+        {
+          "title": "発音とリスニング",
+          "description": "日常会話に必要な明瞭な発音と聞き取りを身につけます。",
+          "icon": "🎤"
+        },
+        {
+          "title": "文化とコミュニケーション",
+          "description": "ベトナム文化を学び、実生活でのやり取りを身につけます。",
+          "icon": "🌏"
+        }
+      ]
+    },
+    "hugePackElements": {
+      "caption": "ベトナム語学習キット",
+      "title": {
+        "content": "完全な学習",
+        "gradient": "リソース"
+      },
+      "section1": "ベトナム語習得に役立つツール一式を見つけましょう。",
+      "section2": "語彙リスト、発音ガイド、文法のコツ、対話型演習、模擬テストまで—すべてがここに。",
+      "btn": "学習素材を閲覧"
+    }
+  },
+  "auth": {
+    "splitLayout": {
+      "needHelp": "お困りですか？"
+    },
+    "signIn": {
+      "title": "こんにちは、お帰りなさい",
+      "subtitle": "続行するには認証情報を入力してください",
+      "form": {
+        "title": "アカウントにサインイン",
+        "dontHaveAnAccount": "アカウントをお持ちではありませんか？",
+        "signUpLink": "はじめる",
+        "forgotPasswordLink": "パスワードをお忘れですか？",
+        "submitBtn": "サインイン",
+        "labelEmailField": "メールアドレス",
+        "labelPasswordField": "パスワード",
+        "placeholderPasswordField": "6文字以上",
+        "or": "または"
+      }
+    },
+    "signUp": {
+      "title": "Minimal Learning",
+      "subtitle": "参加して学習の旅を始めましょう",
+      "form": {
+        "title": "完全無料で開始",
+        "dontHaveAnAccount": "すでにアカウントをお持ちですか？ ",
+        "signInLink": "はじめる",
+        "labelFirstNameField": "名",
+        "labelLastNameField": "姓",
+        "labelEmailField": "メールアドレス",
+        "labelPasswordField": "パスワード",
+        "placeholderPasswordField": "6文字以上",
+        "submitBtn": "アカウントを作成",
+        "or": "または",
+        "terms": {
+          "a": "登録することで、",
+          "b": "利用規約",
+          "c": "および",
+          "d": "プライバシーポリシー",
+          "note": ""
+        }
+      }
+    }
+  }
+}

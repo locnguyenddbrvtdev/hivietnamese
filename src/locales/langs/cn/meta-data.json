@@ -1,0 +1,40 @@
+{
+  "root": {
+    "title": "HayVietnamese — 多语言越南语学习平台",
+    "description": "以多语言方式学习越南语：结构化学习路径、精炼课节、实用生活用语与练习工具，覆盖从入门到高级。"
+  },
+  "ourCourse": {
+    "title": "课程 — 适合各个水平",
+    "description": "浏览分级路线，以及发音、语法与文化模块，满足初学者到高级学习者。"
+  },
+  "contact": {
+    "title": "联系我们 — 保持联络",
+    "description": "有问题、反馈或合作意向？欢迎联系 HayVietnamese 团队。"
+  },
+  "aboutUs": {
+    "title": "关于我们 — 使命与团队",
+    "description": "通过清晰课程、多语言支持与实用练习，我们让越南语学习更容易。"
+  },
+  "comingSoon": {
+    "title": "即将上线 — 新课程与新功能",
+    "description": "更多课程、测验与工具即将推出，敬请期待。"
+  },
+  "maintenance": {
+    "title": "维护中 — 很快回来",
+    "description": "我们正在升级 HayVietnamese 以带来更佳体验，请稍后再试。"
+  },
+  "auth": {
+    "signIn": {
+      "title": "登录 — 继续学习",
+      "description": "访问你的学习进度、课程与已保存词汇。"
+    },
+    "signUp": {
+      "title": "注册 — 免费开始学习",
+      "description": "加入 HayVietnamese，解锁课程、进度跟踪与练习工具。"
+    },
+    "resetPassword": {
+      "title": "重置密码 — 恢复访问",
+      "description": "安全地重置你的 HayVietnamese 账户密码。"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "root": {
+    "title": "HayVietnamese — Nền tảng học tiếng Việt đa ngôn ngữ",
+    "description": "Học tiếng Việt theo cách đa ngôn ngữ: lộ trình rõ ràng, bài học ngắn gọn, mẫu câu đời sống và công cụ luyện tập từ cơ bản đến nâng cao."
+  },
+  "ourCourse": {
+    "title": "Khoá học — Phù hợp mọi trình độ",
+    "description": "Khám phá lộ trình theo cấp độ cùng các mô-đun phát âm, ngữ pháp và văn hoá dành cho người mới đến nâng cao."
+  },
+  "contact": {
+    "title": "Liên hệ — Kết nối với chúng tôi",
+    "description": "Có câu hỏi, góp ý hoặc muốn hợp tác? Liên hệ đội ngũ HayVietnamese."
+  },
+  "aboutUs": {
+    "title": "Giới thiệu — Sứ mệnh & đội ngũ",
+    "description": "Chúng tôi giúp việc học tiếng Việt trở nên dễ tiếp cận với bài học rõ ràng, hỗ trợ đa ngôn ngữ và luyện tập thực tế."
+  },
+  "comingSoon": {
+    "title": "Sắp ra mắt — Bài học & tính năng mới",
+    "description": "Các khoá học, bài kiểm tra và công cụ mới đang được hoàn thiện. Hãy chờ đón!"
+  },
+  "maintenance": {
+    "title": "Bảo trì — Sẽ trở lại sớm",
+    "description": "Chúng tôi đang nâng cấp HayVietnamese để phục vụ bạn tốt hơn. Vui lòng quay lại sau."
+  },
+  "auth": {
+    "signIn": {
+      "title": "Đăng nhập — Tiếp tục học",
+      "description": "Truy cập tiến độ, khoá học và từ vựng đã lưu."
+    },
+    "signUp": {
+      "title": "Đăng ký — Bắt đầu học miễn phí",
+      "description": "Tham gia HayVietnamese để mở khoá khoá học, theo dõi tiến độ và công cụ luyện tập."
+    },
+    "resetPassword": {
+      "title": "Đặt lại mật khẩu — Khôi phục truy cập",
+      "description": "Đặt lại mật khẩu tài khoản HayVietnamese một cách an toàn."
+    }
+  }
+}

@@ -50,7 +50,7 @@ export function AmplifyResetPasswordView() {
 
   const createRedirectPath = (query: string) => {
     const queryString = new URLSearchParams({ email: query }).toString();
-    return `${paths.auth.amplify.updatePassword}?${queryString}`;
+    return `${'paths.auth.amplify.updatePassword'}?${queryString}`;
   };
 
   const onSubmit = handleSubmit(async (data) => {
@@ -100,7 +100,7 @@ export function AmplifyResetPasswordView() {
         {renderForm()}
       </Form>
 
-      <FormReturnLink href={paths.auth.amplify.signIn} />
+      <FormReturnLink href={'paths.auth.amplify.signIn'} />
     </>
   );
 }

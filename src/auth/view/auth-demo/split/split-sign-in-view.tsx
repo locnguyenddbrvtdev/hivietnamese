@@ -1,5 +1,6 @@
 'use client';
-
+import Cookie from 'js-cookie';
+import { v4 as uuidv4 } from 'uuid';
 import { z as zod } from 'zod';
 import { useForm } from 'react-hook-form';
 import { useBoolean } from 'minimal-shared/hooks';
@@ -20,25 +21,33 @@ import { Form, Field } from 'src/components/hook-form';
 import { FormHead } from '../../../components/form-head';
 import { FormSocials } from '../../../components/form-socials';
 import { FormDivider } from '../../../components/form-divider';
+import { DEVICE_ID_KEY, signInWithPassword } from 'src/auth/context/jwt';
+import { toast } from 'src/components/snackbar';
+import { useAuthContext } from 'src/auth/hooks';
+import { useRouter } from 'src/routes/hooks';
+import { wait } from 'src/utils/common';
+import { useTranslate } from 'src/locales';
 
 // ----------------------------------------------------------------------
 
-export type SignInSchemaType = zod.infer<typeof SignInSchema>;
-
-export const SignInSchema = zod.object({
-  email: zod
-    .string()
-    .min(1, { message: 'Email is required!' })
-    .email({ message: 'Email must be a valid email address!' }),
-  password: zod
-    .string()
-    .min(1, { message: 'Password is required!' })
-    .min(6, { message: 'Password must be at least 6 characters!' }),
-});
-
 // ----------------------------------------------------------------------
+interface IProps {
+  content: any;
+}
+export function SplitSignInView({ content }: IProps) {
+  type SignInSchemaType = zod.infer<typeof SignInSchema>;
 
-export function SplitSignInView() {
+  const SignInSchema = zod.object({
+    email: zod
+      .string()
+      .min(1, { message: content.requiredEmailErrMess })
+      .email({ message: content.invalidEmailErrMess }),
+    password: zod.string().min(1, { message: content.requiredPasswordErrMess }),
+    // .min(6, { message: content.tooShortPasswordErrMess }),
+  });
+  const router = useRouter();
+  const { checkUserSession } = useAuthContext();
+  const { t } = useTranslate('messages');
   const showPassword = useBoolean();
 
   const defaultValues: SignInSchemaType = {
@@ -53,15 +62,33 @@ export function SplitSignInView() {
 
   const {
     handleSubmit,
+    setError,
     formState: { isSubmitting },
   } = methods;
 
   const onSubmit = handleSubmit(async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 500));
-      console.info('DATA', data);
-    } catch (error) {
-      console.error(error);
+      const existingDeviceId = Cookie.get(DEVICE_ID_KEY);
+      if (!existingDeviceId) {
+        const newDeviceId = uuidv4();
+        Cookie.set(DEVICE_ID_KEY, newDeviceId);
+      }
+      const deviceId = Cookie.get(DEVICE_ID_KEY) || uuidv4();
+      await signInWithPassword({ email: data.email, password: data.password, deviceId }).then(
+        async () => {
+          toast.success(content.successMess);
+          await checkUserSession?.();
+          await wait(1000);
+          router.refresh();
+        }
+      );
+    } catch (error: any) {
+      if (error?.message === 'Email or password is incorrect') {
+        setError('email', { message: content.signInInforIsInCorrect });
+        setError('password', { message: '' });
+        return;
+      }
+      toast.error(t('axiosFailed'));
     }
   });
 
@@ -73,7 +100,11 @@ export function SplitSignInView() {
         flexDirection: 'column',
       }}
     >
-      <Field.Text name="email" label="Email address" slotProps={{ inputLabel: { shrink: true } }} />
+      <Field.Text
+        name="email"
+        label={content.labelEmailField}
+        slotProps={{ inputLabel: { shrink: true } }}
+      />
 
       <Box
         sx={{
@@ -84,18 +115,18 @@ export function SplitSignInView() {
       >
         <Link
           component={RouterLink}
-          href={'paths.authDemo.split.resetPassword'}
+          href={paths.auth.resetPassword}
           variant="body2"
           color="inherit"
           sx={{ alignSelf: 'flex-end' }}
         >
-          Forgot password?
+          {content.forgotPasswordLink}
         </Link>
 
         <Field.Text
           name="password"
-          label="Password"
-          placeholder="6+ characters"
+          label={content.labelPasswordField}
+          placeholder={content.placeholderPasswordField}
           type={showPassword.value ? 'text' : 'password'}
           slotProps={{
             inputLabel: { shrink: true },
@@ -123,7 +154,7 @@ export function SplitSignInView() {
         loading={isSubmitting}
         loadingIndicator="Sign in..."
       >
-        Sign in
+        {content.submitBtn}
       </Button>
     </Box>
   );
@@ -131,12 +162,12 @@ export function SplitSignInView() {
   return (
     <>
       <FormHead
-        title="Sign in to your account"
+        title={content.title}
         description={
           <>
-            {`Don’t have an account? `}
-            <Link component={RouterLink} href={'paths.authDemo.split.signUp'} variant="subtitle2">
-              Get started
+            {content.dontHaveAnAccount}
+            <Link component={RouterLink} href={paths.auth.signUp} variant="subtitle2">
+              {content.signUpLink}
             </Link>
           </>
         }
@@ -147,7 +178,7 @@ export function SplitSignInView() {
         {renderForm()}
       </Form>
 
-      <FormDivider />
+      <FormDivider label={content.or} />
 
       <FormSocials
         signInWithGoogle={() => {}}

@@ -66,12 +66,7 @@ export function NavUpgrade({ sx, ...other }: BoxProps) {
           </Typography>
         </Box>
 
-        <Button
-          variant="contained"
-          href={paths.minimalStore}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button variant="contained" href={'#'} target="_blank" rel="noopener noreferrer">
           Upgrade to Pro
         </Button>
       </Box>
@@ -153,11 +148,11 @@ export function UpgradeBlock({ sx, ...other }: BoxProps) {
             typography: 'subtitle2',
           }}
         >
-          Power up Productivity!
+          Power up Vietnamese!
         </Box>
 
         <Button variant="contained" size="small" color="warning">
-          Upgrade to Pro
+          Subscription Now
         </Button>
       </Box>
     </Box>

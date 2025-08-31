@@ -1,0 +1,40 @@
+{
+  "root": {
+    "title": "HayVietnamese — 다국어 베트남어 학습 플랫폼",
+    "description": "다국어 방식으로 베트남어를 배우세요. 체계적인 학습 경로, 짧은 레슨, 실생활 표현과 연습 도구를 초급부터 고급까지 제공합니다."
+  },
+  "ourCourse": {
+    "title": "코스 — 모든 레벨 대상",
+    "description": "레벨별 트랙과 발음·문법·문화 모듈을 둘러보세요. 초급부터 고급까지."
+  },
+  "contact": {
+    "title": "문의 — 연락하기",
+    "description": "질문, 피드백, 제휴 문의는 HayVietnamese 팀에 연락해 주세요."
+  },
+  "aboutUs": {
+    "title": "소개 — 미션과 팀",
+    "description": "명확한 레슨과 다국어 지원, 실전 연습으로 베트남어 학습을 더 쉽게 만듭니다."
+  },
+  "comingSoon": {
+    "title": "곧 출시 — 새로운 레슨과 기능",
+    "description": "새로운 코스, 퀴즈, 도구가 곧 제공됩니다. 기대해 주세요."
+  },
+  "maintenance": {
+    "title": "점검 중 — 곧 돌아옵니다",
+    "description": "더 나은 서비스를 위해 HayVietnamese를 업그레이드하고 있습니다. 잠시 후 다시 시도해 주세요."
+  },
+  "auth": {
+    "signIn": {
+      "title": "로그인 — 학습 이어하기",
+      "description": "학습 진행 상황, 코스, 저장한 단어에 접근하세요."
+    },
+    "signUp": {
+      "title": "회원가입 — 무료로 시작",
+      "description": "HayVietnamese에 가입하여 코스, 진행 추적, 연습 도구를 이용해 보세요."
+    },
+    "resetPassword": {
+      "title": "비밀번호 재설정 — 접근 복구",
+      "description": "HayVietnamese 계정 비밀번호를 안전하게 재설정합니다."
+    }
+  }
+}

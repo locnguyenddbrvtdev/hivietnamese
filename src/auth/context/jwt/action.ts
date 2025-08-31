@@ -1,15 +1,20 @@
 'use client';
 
+import { UAParser } from 'ua-parser-js';
+
 import axios, { endpoints } from 'src/lib/axios';
 
 import { setSession } from './utils';
-import { JWT_STORAGE_KEY } from './constant';
+import { JWT_ACCESS_KEY } from './constant';
+// import { IResponse } from 'src/types/reponse';
 
 // ----------------------------------------------------------------------
 
 export type SignInParams = {
   email: string;
   password: string;
+  rememberMe?: boolean;
+  deviceId: string;
 };
 
 export type SignUpParams = {
@@ -22,21 +27,29 @@ export type SignUpParams = {
 /** **************************************
  * Sign in
  *************************************** */
-export const signInWithPassword = async ({ email, password }: SignInParams): Promise<void> => {
+export const signInWithPassword = async ({
+  email,
+  password,
+  rememberMe = true,
+  deviceId,
+}: SignInParams): Promise<void> => {
   try {
-    const params = { email, password };
+    const parser = UAParser();
+    const params = { email, password, rememberMe, deviceId };
 
-    const res = await axios.post(endpoints.auth.signIn, params);
+    const res = await axios.post(endpoints.auth.signIn, {
+      ...params,
+      deviceName: `${parser.os.name}-${parser.browser.name}`,
+    });
 
-    const { accessToken } = res.data;
+    const { accessToken, refreshToken } = res.data;
 
     if (!accessToken) {
       throw new Error('Access token not found in response');
     }
 
-    setSession(accessToken);
+    setSession(accessToken, refreshToken);
   } catch (error) {
-    console.error('Error during sign in:', error);
     throw error;
   }
 };
@@ -59,14 +72,6 @@ export const signUp = async ({
 
   try {
     const res = await axios.post(endpoints.auth.signUp, params);
-
-    const { accessToken } = res.data;
-
-    if (!accessToken) {
-      throw new Error('Access token not found in response');
-    }
-
-    sessionStorage.setItem(JWT_STORAGE_KEY, accessToken);
   } catch (error) {
     console.error('Error during sign up:', error);
     throw error;
@@ -78,7 +83,7 @@ export const signUp = async ({
  *************************************** */
 export const signOut = async (): Promise<void> => {
   try {
-    await setSession(null);
+    await setSession(null, null);
   } catch (error) {
     console.error('Error during sign out:', error);
     throw error;

@@ -16,10 +16,11 @@ import { HomeIntegrations } from '../home-integrations';
 import { HomeAdvertisement } from '../home-advertisement';
 import { HomeHugePackElements } from '../home-hugepack-elements';
 import { HomeHighlightFeatures } from '../home-highlight-features';
+import { TFunction } from 'i18next';
 
 // ----------------------------------------------------------------------
 
-export function HomeView() {
+export function HomeView({ ssrContent }: { ssrContent: any }) {
   const pageProgress = useScrollProgress();
 
   return (
@@ -32,12 +33,12 @@ export function HomeView() {
 
       <BackToTopButton />
 
-      <HomeHero />
+      <HomeHero ssrContent={ssrContent.homeHero} />
 
       <Stack sx={{ position: 'relative', bgcolor: 'background.default' }}>
-        <HomeMinimal />
+        <HomeMinimal ssrContent={ssrContent.homeMinimal} />
 
-        <HomeHugePackElements />
+        <HomeHugePackElements ssrContent={ssrContent.hugePackElements} />
 
         {/* <HomeForDesigner /> */}
 

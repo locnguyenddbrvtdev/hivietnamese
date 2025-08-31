@@ -1,0 +1,93 @@
+{
+  "root": {
+    "homeHero": {
+      "H1.1": "提升你的越南语学习",
+      "H1.2": "一起",
+      "desc1.1": "掌握越南语的完美起点。",
+      "desc1.2": "我们经过验证的方法让学习更轻松、更快速、更有趣。",
+      "happyStudent": "名学员已在我们的帮助下成功提升越南语能力。",
+      "startLearningBtnContent": "开始学习",
+      "viewCourseBtnContent": "查看课程",
+      "trialFreeLessonLink": "试学一节课",
+      "availableUser": "适用对象",
+      "beginner": "初学者",
+      "intermediate": "中级",
+      "advanced": "高级",
+      "businessVietnamese": "商务越南语",
+      "vietnameseForTravel": "旅行越南语"
+    },
+    "homeMinimal": {
+      "caption": "成功可视化",
+      "title": "包含内容",
+      "items": [
+        {
+          "title": "语法与词汇",
+          "description": "通过简短易懂的课程打下扎实的越南语基础。",
+          "icon": "📚"
+        },
+        {
+          "title": "发音与听力",
+          "description": "掌握清晰发音和日常交流所需的听力理解。",
+          "icon": "🎤"
+        },
+        {
+          "title": "文化与沟通",
+          "description": "探索越南文化并学习在真实场景中的交流方式。",
+          "icon": "🌏"
+        }
+      ]
+    },
+    "hugePackElements": {
+      "caption": "越南语学习工具包",
+      "title": {
+        "content": "完整的学习",
+        "gradient": "资源"
+      },
+      "section1": "发现一套完整的工具，帮助你掌握越南语。",
+      "section2": "从词汇表、发音指南、语法技巧到互动练习和模拟测试，一应俱全。",
+      "btn": "浏览学习资料"
+    }
+  },
+  "auth": {
+    "splitLayout": {
+      "needHelp": "需要帮助？"
+    },
+    "signIn": {
+      "title": "嗨，欢迎回来",
+      "subtitle": "请输入您的凭证以继续",
+      "form": {
+        "title": "登录你的账户",
+        "dontHaveAnAccount": "还没有账号？",
+        "signUpLink": "立即开始",
+        "forgotPasswordLink": "忘记密码？",
+        "submitBtn": "登录",
+        "labelEmailField": "电子邮箱",
+        "labelPasswordField": "密码",
+        "placeholderPasswordField": "6+ 个字符",
+        "or": "或"
+      }
+    },
+    "signUp": {
+      "title": "Minimal Learning",
+      "subtitle": "加入我们，开启你的旅程",
+      "form": {
+        "title": "免费开始",
+        "dontHaveAnAccount": "已经有账号？ ",
+        "signInLink": "立即开始",
+        "labelFirstNameField": "名",
+        "labelLastNameField": "姓",
+        "labelEmailField": "电子邮箱",
+        "labelPasswordField": "密码",
+        "placeholderPasswordField": "6+ 个字符",
+        "submitBtn": "创建账户",
+        "or": "或",
+        "terms": {
+          "a": "注册即表示我同意",
+          "b": "服务条款",
+          "c": " 和 ",
+          "d": "隐私政策"
+        }
+      }
+    }
+  }
+}

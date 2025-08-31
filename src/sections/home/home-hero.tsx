@@ -36,7 +36,11 @@ const motionProps: MotionProps = {
   variants: varFade('inUp', { distance: 24 }),
 };
 
-export function HomeHero({ sx, ...other }: BoxProps) {
+interface IProps extends BoxProps {
+  ssrContent?: any;
+}
+
+export function HomeHero({ sx, ssrContent, ...other }: IProps) {
   const scrollProgress = useScrollPercent();
 
   const mdUp = useMediaQuery((theme) => theme.breakpoints.up(mdKey));
@@ -77,9 +81,9 @@ export function HomeHero({ sx, ...other }: BoxProps) {
         ]}
       >
         <Box component="span" sx={{ width: 1, opacity: 0.24 }}>
-          Boost your Vietnamese learning
+          {ssrContent?.['H1.1']}
         </Box>
-        journey with
+        {ssrContent?.['H1.2']}
         <Box
           component={m.span}
           animate={{ backgroundPosition: '200% center' }}
@@ -117,7 +121,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
           }),
         ]}
       >
-        {`The perfect starting point for mastering Vietnamese. \nOur proven methods make learning easier, faster, and more enjoyable.`}
+        {`${ssrContent?.['desc1.1']} \n${ssrContent?.['desc1.2']}`}
       </Typography>
     </m.div>
   );
@@ -150,7 +154,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             />
           ))}
         </AvatarGroup>
-        160+ happy students have successfully improved their Vietnamese skills with us.
+        160+ {ssrContent?.['happyStudent']}
       </Box>
     </m.div>
   );
@@ -176,7 +180,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             sx={{ height: 52 }}
           >
             <span>
-              Start Learning
+              {ssrContent?.['startLearningBtnContent']}
               <Box
                 component="small"
                 sx={[
@@ -205,7 +209,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
             sx={{ gap: 0.75, alignItems: 'center', display: 'inline-flex' }}
           >
             <Iconify width={16} icon="eva:external-link-fill" />
-            Try a free lesson
+            {ssrContent?.['trialFreeLessonLink']}
           </Link>
         </Stack>
       </m.div>
@@ -221,7 +225,7 @@ export function HomeHero({ sx, ...other }: BoxProps) {
           startIcon={<Iconify width={24} icon="solar:figma-outline" />}
           sx={{ height: 52, borderColor: 'currentColor' }}
         >
-          View Course
+          {ssrContent?.['viewCourseBtnContent']}
         </Button>
       </m.div>
     </Box>
@@ -231,17 +235,17 @@ export function HomeHero({ sx, ...other }: BoxProps) {
     <Stack spacing={3} sx={{ textAlign: 'center' }}>
       <m.div {...motionProps}>
         <Typography variant="overline" sx={{ opacity: 0.4 }}>
-          Available For
+          {ssrContent?.['availableUser']}
         </Typography>
       </m.div>
 
       <Box sx={{ gap: 2.5, display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
         {[
-          { label: 'Beginner', icon: 'ic-beginner.svg' },
-          { label: 'Intermediate', icon: 'ic-intermediate.svg' },
-          { label: 'Advanced', icon: 'ic-advanced.svg' },
-          { label: 'Business Vietnamese', icon: 'ic-business.svg' },
-          { label: 'Vietnamese for Travel', icon: 'ic-travel.svg' },
+          { label: ssrContent?.['beginner'], icon: 'ic-beginner.svg' },
+          { label: ssrContent?.['intermediate'], icon: 'ic-intermediate.svg' },
+          { label: ssrContent?.['advanced'], icon: 'ic-advanced.svg' },
+          { label: ssrContent?.['businessVietnamese'], icon: 'ic-business.svg' },
+          { label: ssrContent?.['vietnameseForTravel'], icon: 'ic-travel.svg' },
         ].map(({ label, icon }) => (
           <m.div {...motionProps} key={label} style={{ textAlign: 'center' }}>
             <Box component="span" sx={{ fontSize: 12, color: 'text.secondary' }}>
