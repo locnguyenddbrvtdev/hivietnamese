@@ -3,22 +3,23 @@ export interface ICourse {
   title: string;
   description: string;
   summaryContent: string[];
-  content: ICourseContentGroup[];
+  content: ICourseLessonGroup[];
   knowledgeRequired: string[];
   price: number;
   discountPercent: number;
+  thumbnailPath: string;
   isPublish: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
 
-export interface ICourseContentGroup {
+export interface ICourseLessonGroup {
   title: string;
-  lessonCount: number;
+  count: number;
   lessons: ICourseLesson[];
 }
 
 export interface ICourseLesson {
   title: string;
-  content: any;
+  content: string;
 }
